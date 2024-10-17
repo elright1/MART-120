@@ -1,0 +1,22 @@
+body {  background-color:blanchedalmond;}
+
+h1   { font-family: 'Times New Roman', Times, serif; 
+    font-size: xx-large; 
+    color: #e09191;}
+
+p    { font-family: Arial, Helvetica, sans-serif; 
+    font-size: small; 
+    color: #e09191;}
+
+h3   { font-family: Arial, Helvetica, sans-serif;
+       font-size: small;
+        color: #e09191;}
+
+li   { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       font-size: smaller;
+       color: #bd98da;}
+       
+.MyClass{
+    font-family: Arial, Helvetica, sans-serif;
+       font-size: smaller;
+        color: #bd98da;}
