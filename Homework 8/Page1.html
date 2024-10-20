@@ -1,0 +1,53 @@
+<html>
+<head>
+    <title>Contact Us</title>
+    <link rel="stylesheet" type="text/css" href="mainstyle.css">
+    <style>
+        .error {
+            border: 2px solid red;
+        }
+    </style>
+    <script>
+        function getInformation() {
+            var nameInput = document.getElementById("Name");
+            var emailInput = document.getElementById("Email");
+            var isValid = true;
+
+           
+            nameInput.classList.remove("error");
+            emailInput.classList.remove("error");
+
+            if (nameInput.value.trim() === "") {
+                nameInput.classList.add("error");
+                isValid = false;
+            }
+
+            
+            if (emailInput.value.trim() === "") {
+                emailInput.classList.add("error");
+                isValid = false;
+            }
+
+            if (isValid) {
+                var message = "Hello Human " + nameInput.value;
+                var agreement = document.querySelector('input[name="agreement"]:checked');
+                if (agreement) {
+                    message += "\nYou accepted: " + agreement.value;
+                } else {
+                    message += "\nYou did not accept the terms.";
+                }
+                window.alert(message);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 id="specificStyle">Contact Us</h1>
+    <h3>Accept terms of agreement</h3>
+    <input type="checkbox" name="agreement" value="yes">Yes<br>
+    <input type="checkbox" name="agreement" value="no">No<br>
+    Name: <input type="text" id="Name"><br>
+    Email: <input type="text" id="Email"><br>
+    <button id="mySubmit" onclick="getInformation();">Submit</button>
+</body>
+</html>
