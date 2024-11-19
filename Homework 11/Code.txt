@@ -47,13 +47,6 @@ function draw() {
   fill(13, 145, 14); // Set color for the character
   circle(characterX, characterY, 20); // Draw the circle (character)
 
-  
-  
-  
-  // Check for movement (W, A, S, D keys)
-  characterMovement();
-   
-
       
   
   //maze
