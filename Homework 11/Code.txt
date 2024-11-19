@@ -101,9 +101,7 @@ function createBorders(thickness)
       rect(width - thickness, 0, thickness, height -50); 
 }
 
-function mouseClicked()
-{ mouseShapeX = mouseX;
-    mouseShapeY = mouseY;     }
+
 }
 
 function mousePressed() {
