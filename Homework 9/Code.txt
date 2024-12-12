@@ -1,0 +1,114 @@
+
+var neckX = 100;
+var neckY = 350;
+var neckDirection = 1;
+
+var cheekX = 170;
+var cheekY = 250;
+var cheekDirection = 3;
+
+var size = 22;
+var count = 0;
+var sizeDirection = 2;
+
+var lipX = 245;   
+var lipY = 310;   
+let xSpeed = 2;   
+let ySpeed = 2;   
+
+
+function setup()
+{
+    createCanvas(500, 600);
+}
+
+
+function draw() 
+{
+  background(123,23,129);
+  ellipse(250, 350, 40, 20);
+  triangle(220, 350, 110, 280, 100, 230);
+  ellipse(lipX, lipY, 30, 10);
+  //  lipX += xSpeed;
+//  lipY += ySpeed;
+  if (lipX > width - 15 || lipX < 15) { 
+    xSpeed *= -1;
+  }
+  if (lipY > height - 5 || lipY < 5) {
+    ySpeed *= -1; 
+  }
+
+{
+  //Lips
+    stroke('rgb(20,18,20)');
+  strokeWeight(3);
+   line(280, 306, 215, 306);
+     line(283, 308, 216, 307);
+       line(280, 308, 215, 308);
+   line(277, 303, 220, 303);
+line(277, 303, 280, 303);
+}
+  
+  {
+  //eyes
+  ellipse(270, 210, 40, 30);
+  ellipse(200, 210, 40, 30);
+ellipse(270, 200, 7, 7); // Right pupil 
+ellipse(200, 200, 7, 7); // Left pupil
+ ellipse(270, 200, 15, 15); // Right iris
+ellipse(200, 200, 15, 15); // Left iris 
+  ellipse(270, 200, 10, 10); // Right iris
+ellipse(200, 200, 10, 10); // Left iris
+  ellipse(270, 200, 5, 5); // Right iris
+ellipse(200, 200, 5, 5); // Left iris
+  ellipse(270, 200, 3, 3); // Right iris
+ellipse(200, 200, 3, 3); // Left iris
+  }
+  
+  {
+  //nose
+  triangle(240, 230, 230, 250, 250, 250);
+  }
+  
+  {
+     stroke(0);
+  strokeWeight(4);
+  line(260, 170, 280, 165); // right eyebrow
+ line(210, 170, 180, 170); // left eyebrow
+  }
+  {
+  
+rect(neckX, neckY, 100, 100); // Neck shape
+    // neckX += neckDirection;
+    if(neckX >= 418 || neckX <= 82)
+    {
+        neckDirection *= -1;
+    }
+  }
+  
+  {
+    //forehead
+ triangle(240, 150, 200, 130, 260, 130);
+  
+   ellipse(170, cheekY, 70, 50);
+    //cheekY += cheekDirection;
+    if(cheekY <= 0 || cheekY >= 450 )
+    {
+        cheekDirection *= -1;
+    }
+  }
+  
+textSize(size);
+
+//size += sizeDirection;
+count++;
+if (count > 15) {
+    sizeDirection *= -1;
+    count = 0;
+}
+text("Ella Rightnowar", 100, 100);
+
+
+}
+
+}
